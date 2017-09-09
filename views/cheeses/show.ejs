@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="columns">
+    <div class="column">
+      <figure class="image">
+        <% if(locals.isAuthenticated) { %>
+          <form method="POST" action="/cheeses/<%= cheese.id %>/favorite" class="favorite">
+            <button>
+              <% if(locals.currentUser.hasFavorited(cheese)) { %>
+                <i class="fa fa-heart"></i>
+              <% } else { %>
+                <i class="fa fa-heart-o"></i>
+              <% } %>
+            </button>
+          </form>
+        <% } %>
+        <img src="<%= cheese.image %>" alt="<%= cheese.name %>">
+      </figure>
+    </div>
+    <div class="column">
+      <h3 class="title"><%= cheese.name %></h3>
+      <h4 class="subtitle"><%= cheese.origin %></h4>
+      <div class="icon is-small">
+        <i class="fa fa-pencil"></i>
+      </div>
+      <p><%= cheese.tastingNotes %></p>
+      <% if(cheese.user) { %>
+        <p>Added by: <strong><a href="/users/<%= cheese.user.id %>"><%= cheese.user.username %></a></strong></p>
+      <% } %>
+      <br>
+      <% if(cheese.isOwnedBy(locals.currentUser)) { %>
+        <form method="POST" action="/cheeses/<%= cheese.id %>">
+          <input type="hidden" name="_method" value="DELETE">
+          <a class="button is-primary" href="/cheeses/<%= cheese.id %>/edit">Edit</a>
+          <button class="button is-danger">Delete</button>
+        </form>
+      <% } %>
+    </div>
+  </div>
+</div>
