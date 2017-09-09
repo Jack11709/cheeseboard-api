@@ -1,6 +1,7 @@
 const User = require('../models/user');
 
 function sessionsNew(req, res) {
+  // store the page that the user has come from in the session
   req.session.returnTo = req.headers.referer;
   res.render('sessions/new');
 }
@@ -15,8 +16,12 @@ function sessionsCreate(req, res) {
       }
       // user is authenticated
       req.session.userId = user.id;
+
+      // return the user back to the page that they came from
+      // remove the reference from the session
       const returnTo = req.session.returnTo;
       delete req.session.returnTo;
+      
       res.redirect(returnTo);
     });
 }

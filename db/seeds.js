@@ -150,6 +150,6 @@ Cheese
     image: 'http://www.monthlyclubs.com/media/catalog/product/cache/13/image/285x/9df78eab33525d08d6e5fb8d27136e95/m/a/manchego-3.jpg',
     tastingNotes: 'Manchego has a distinctive flavor and an equally distinctive look. It can be recognized by a unique zigzag or cross hatch pattern on its black-gray or buff-colored rind which is created by the rippled surface of the press used to make it. Don’t eat the rind—it’s inedible— but inside you’ll discover an ivory-colored interior with several small holes that’s a real treat.'
   }])
-  .then((cheese) => console.log(`${cheese.length} cheeses created!`))
-  .catch((err) => console.log(err))
+  .then(cheese => console.log(`${cheese.length} cheeses created!`))
+  .catch(err => console.log(err))
   .finally(() => mongoose.connection.close());

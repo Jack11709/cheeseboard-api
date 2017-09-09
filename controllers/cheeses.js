@@ -69,6 +69,7 @@ function cheesesDelete(req, res) {
     .catch(err => res.render('error', { err }));
 }
 
+// This requires the user's favorites to be populated (see `lib/userAuth.js`)
 function cheesesFavorite(req, res) {
   if(!req.currentUser.favorites.find(cheese => cheese.id === req.params.id)) {
     req.currentUser.favorites.push(req.params.id);

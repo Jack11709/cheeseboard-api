@@ -17,7 +17,7 @@ If you do not have them, I would advise installing them with [homebrew](https://
 ## Features
 
 - Authentication with BCrypt
-- Login redirects to previously viewed page
+- Login redirects to previously viewed page (see `controllers/sessions.js`)
 - Users can add and favourite cheeses
 - Users can only modify data they have added themselves
 - User profile page shows user added cheeses and favourite cheeses
