@@ -28,3 +28,4 @@ If you do not have them, I would advise installing them with [homebrew](https://
 
 - Feel free to create an account and add cheeses
 - All user generated data will be removed at midnight
+- All images and tasting notes taken from [The Gourmet Cheese of the Month Club](http://www.cheesemonthclub.com/)
