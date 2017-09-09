@@ -1,11 +1,20 @@
 {
   "name": "cheesebored",
   "version": "1.0.0",
+  "description": "An example Express CRUD app for education purposes",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "seed": "node db/seeds",
     "start": "node index"
+  },
+  "homepage": "https://cheesebored.herokuapp.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mickyginger/cheesebored"
+  },
+  "engines": {
+    "node": "8.x.x"
   },
   "dependencies": {
     "bcrypt": "^1.0.3",
