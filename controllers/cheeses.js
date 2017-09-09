@@ -71,12 +71,16 @@ function cheesesDelete(req, res) {
 
 // This requires the user's favorites to be populated (see `lib/userAuth.js`)
 function cheesesFavorite(req, res) {
+  // if the selected cheese is not in the user's favorites
   if(!req.currentUser.favorites.find(cheese => cheese.id === req.params.id)) {
+    // add the cheese id to the user's favorites
     req.currentUser.favorites.push(req.params.id);
   } else {
+    // remove the cheese from the user's favorites
     req.currentUser.favorites = req.currentUser.favorites.filter(cheese => cheese.id !== req.params.id);
   }
 
+  // save the user
   req.currentUser.save()
     .then(() => res.redirect('back'));
 }
