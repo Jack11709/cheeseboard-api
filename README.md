@@ -2,6 +2,8 @@
 
 This is an example RESTful Express App with EJS for teaching and learning purposes.
 
+![CheeseBored](https://user-images.githubusercontent.com/3531085/30239331-30757e7e-9552-11e7-9bf6-2ffe35f32200.png)
+
 ## Setup
 
 Clone or download the repo
