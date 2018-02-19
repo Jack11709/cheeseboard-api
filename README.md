@@ -4,6 +4,8 @@ This is an example RESTful Express App with EJS for teaching and learning purpos
 
 ![CheeseBored](https://user-images.githubusercontent.com/3531085/30239331-30757e7e-9552-11e7-9bf6-2ffe35f32200.png)
 
+See the demo online here: [https://cheesebored.herokuapp.com/](https://cheesebored.herokuapp.com/)
+
 ## Setup
 
 Clone or download the repo
