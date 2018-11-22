@@ -5,6 +5,14 @@ const userSchema = new mongoose.Schema({
   username: { type: String, required: true, unique: true },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true }
+}, {
+  toJSON: {
+    transform(doc, json) {
+      delete json.password;
+      delete json.__v;
+      return json
+    }
+  }
 });
 
 userSchema

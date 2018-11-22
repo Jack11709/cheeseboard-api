@@ -3,6 +3,7 @@ const Cheese = require('../models/cheese');
 function cheesesIndex(req, res, next) {
   Cheese
     .find()
+    .populate('user')
     .sort({ name: 1 })
     .exec()
     .then(cheeses => res.json(cheeses))
