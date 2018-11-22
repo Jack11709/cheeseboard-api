@@ -29,17 +29,10 @@ function cheesesCreate(req, res, next) {
     .catch(next);
 }
 
-function cheesesEdit(req, res, next) {
-  Cheese
-    .findById(req.params.id)
-    .exec()
-    .then(cheese => res.json(cheese))
-    .catch(next);
-}
-
 function cheesesUpdate(req, res, next) {
   Cheese
     .findById(req.params.id)
+    .populate('user')
     .exec()
     .then(cheese => cheese.set(req.body))
     .then(cheese => cheese.save())
@@ -60,7 +53,6 @@ module.exports = {
   index: cheesesIndex,
   show: cheesesShow,
   create: cheesesCreate,
-  edit: cheesesEdit,
   update: cheesesUpdate,
   delete: cheesesDelete
 };
