@@ -8,9 +8,4 @@ const cheeseSchema = new mongoose.Schema({
   user: { type: mongoose.Schema.ObjectId, ref: 'User' }
 });
 
-cheeseSchema.methods.isOwnedBy = function isOwnedBy(user) {
-  if(!user) return false;  
-  return !!user.cheeses.find(cheese => cheese.id === this.id);
-};
-
 module.exports = mongoose.model('Cheese', cheeseSchema);

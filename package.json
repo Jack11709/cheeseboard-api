@@ -13,20 +13,12 @@
     "type": "git",
     "url": "https://github.com/mickyginger/cheesebored"
   },
-  "engines": {
-    "node": "8.x.x"
-  },
   "dependencies": {
-    "bcrypt": "^1.0.3",
-    "bluebird": "^3.4.7",
-    "body-parser": "^1.17.2",
-    "ejs": "^2.5.5",
-    "express": "^4.14.0",
-    "express-ejs-layouts": "^2.2.0",
-    "express-flash": "^0.0.2",
-    "express-session": "^1.15.5",
-    "method-override": "^2.3.9",
-    "mongoose": "^4.7.7",
-    "morgan": "^1.7.0"
+    "bcrypt": "^3.0.2",
+    "bluebird": "^3.5.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.4.0",
+    "mongoose": "^5.3.13"
   }
 }
