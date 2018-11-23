@@ -155,7 +155,7 @@ mongoose.connect(dbURI, (err, db) => {
       }, {
         name: 'Danish Havarti',
         origin: 'Denmark',
-        image: `${appURI}/images/denmark.jpeg`,
+        image: `${appURI}/images/danish-havarti.jpeg`,
         tastingNotes: 'Havarti has a mild flavor similar to a Monterey Jack. Slightly acidic, the taste is buttery and ranges from somewhat sweet to very sweet.',
         user
       }, {
@@ -167,7 +167,7 @@ mongoose.connect(dbURI, (err, db) => {
       }, {
         name: 'Salemville Armish Blue',
         origin: 'USA',
-        image: `${appURI}/images/salemville-armish-blue.jpeg`,
+        image: `${appURI}/images/salemville-amish-blue.jpeg`,
         tastingNotes: 'This cheese has a rich, earthy flavor, well balanced and flavorful. Crumble on salad or pasta tossed with garlic and olive oil, stir into hot mashed potatoes or transform a vinaigrette into delicious blue cheese salad dressing by adding Amish Blue to it.',
         user
       }, {
@@ -179,7 +179,7 @@ mongoose.connect(dbURI, (err, db) => {
       }, {
         name: 'Manchego',
         origin: 'Netherlands',
-        image: `${appURI}/images/Manchego.jpeg`,
+        image: `${appURI}/images/manchego.jpeg`,
         tastingNotes: 'Manchego has a distinctive flavor and an equally distinctive look. It can be recognized by a unique zigzag or cross hatch pattern on its black-gray or buff-colored rind which is created by the rippled surface of the press used to make it. Don’t eat the rind—it’s inedible— but inside you’ll discover an ivory-colored interior with several small holes that’s a real treat.',
         user
       }]))
