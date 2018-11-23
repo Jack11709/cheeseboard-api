@@ -5,7 +5,7 @@ const cheeseSchema = new mongoose.Schema({
   origin: { type: String, required: true },
   image: { type: String, required: true },
   tastingNotes: { type: String, maxlength: 380 },
-  user: { type: mongoose.Schema.ObjectId, ref: 'User' }
+  user: { type: mongoose.Schema.ObjectId, ref: 'User', required: true }
 }, {
   toJSON: {
     transform(doc, json) {
