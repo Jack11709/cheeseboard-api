@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
 const cheeseSchema = new mongoose.Schema({
   name: { type: String, required: true },
@@ -9,10 +9,10 @@ const cheeseSchema = new mongoose.Schema({
 }, {
   toJSON: {
     transform(doc, json) {
-      delete json.__v;
+      delete json.__v
       return json
     }
   }
-});
+})
 
-module.exports = mongoose.model('Cheese', cheeseSchema);
+module.exports = mongoose.model('Cheese', cheeseSchema)

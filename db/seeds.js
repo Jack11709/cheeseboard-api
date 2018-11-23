@@ -1,10 +1,10 @@
-const mongoose = require('mongoose');
-mongoose.Promise = require('bluebird');
+const mongoose = require('mongoose')
+mongoose.Promise = require('bluebird')
 
-const { dbURI, appURI } = require('../config/environment');
+const { dbURI, appURI } = require('../config/environment')
 
-const Cheese = require('../models/cheese');
-const User = require('../models/user');
+const Cheese = require('../models/cheese')
+const User = require('../models/user')
 
 mongoose.connect(dbURI, (err, db) => {
   db.dropDatabase()
@@ -185,5 +185,5 @@ mongoose.connect(dbURI, (err, db) => {
       }]))
     .then(cheese => console.log(`${cheese.length} cheeses created!`))
     .catch(err => console.log(err))
-    .finally(() => mongoose.connection.close());
+    .finally(() => mongoose.connection.close())
 })

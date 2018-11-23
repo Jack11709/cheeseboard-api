@@ -1,4 +1,4 @@
-const Cheese = require('../models/cheese');
+const Cheese = require('../models/cheese')
 
 function cheesesIndex(req, res, next) {
   Cheese
@@ -7,7 +7,7 @@ function cheesesIndex(req, res, next) {
     .sort({ name: 1 })
     .exec()
     .then(cheeses => res.json(cheeses))
-    .catch(next);
+    .catch(next)
 }
 
 function cheesesShow(req, res, next) {
@@ -16,17 +16,17 @@ function cheesesShow(req, res, next) {
     .populate('user')
     .exec()
     .then(cheese => res.json(cheese))
-    .catch(next);
+    .catch(next)
 }
 
 function cheesesCreate(req, res, next) {
 
-  req.body.user = req.currentUser;
+  req.body.user = req.currentUser
 
   Cheese
     .create(req.body)
     .then(cheese => res.json(cheese))
-    .catch(next);
+    .catch(next)
 }
 
 function cheesesUpdate(req, res, next) {
@@ -37,7 +37,7 @@ function cheesesUpdate(req, res, next) {
     .then(cheese => cheese.set(req.body))
     .then(cheese => cheese.save())
     .then(cheese => res.json(cheese))
-    .catch(next);
+    .catch(next)
 }
 
 function cheesesDelete(req, res, next) {
@@ -46,7 +46,7 @@ function cheesesDelete(req, res, next) {
     .exec()
     .then(cheese => cheese.remove())
     .then(() => res.sendStatus(204))
-    .catch(next);
+    .catch(next)
 }
 
 module.exports = {
@@ -55,4 +55,4 @@ module.exports = {
   create: cheesesCreate,
   update: cheesesUpdate,
   delete: cheesesDelete
-};
+}
