@@ -13,7 +13,7 @@ const app = express()
 
 mongoose.connect(dbURI)
 
-app.use(cors({ origin: /http:\/\/localhost:[0-9]{2,4}$/ }))
+app.use(cors())
 
 app.use(express.static(`${__dirname}/public`))
 app.use(bodyParser.json())
