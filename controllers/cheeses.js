@@ -1,8 +1,14 @@
 const Cheese = require('../models/cheese')
 
 function cheesesIndex(req, res, next) {
+
+  const query = {}
+  for(const prop in req.query) {
+    query[prop] = new RegExp(req.query[prop], 'i')
+  }
+
   Cheese
-    .find(req.query)
+    .find(query)
     .populate('user')
     .sort({ name: 1 })
     .exec()
