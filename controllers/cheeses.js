@@ -2,7 +2,7 @@ const Cheese = require('../models/cheese')
 
 function cheesesIndex(req, res, next) {
   Cheese
-    .find()
+    .find(req.query)
     .populate('user')
     .sort({ name: 1 })
     .exec()
