@@ -31,7 +31,7 @@ function cheesesCreate(req, res, next) {
 
   Cheese
     .create(req.body)
-    .then(cheese => res.json(cheese))
+    .then(cheese => res.status(201).json(cheese))
     .catch(next)
 }
 
