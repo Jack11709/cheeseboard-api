@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "seed": "node db/seeds",
-    "start": "node index"
+    "start": "node index",
+    "serve": "nodemon"
   },
   "homepage": "https://cheesebored.herokuapp.com",
   "repository": {

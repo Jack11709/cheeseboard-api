@@ -101,6 +101,45 @@
 
                 <div class="message is-small">
                   <div class="message-header">
+                    Parameters
+                  </div>
+                  <div class="message-body">
+                    <table class="table is-fullwidth">
+                      <thead>
+                        <tr>
+                          <th>Property</th>
+                          <th>Data type</th>
+                          <th>Additional info</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><code>username</code></td>
+                          <td>String</td>
+                          <td>Required</td>
+                        </tr>
+                        <tr>
+                          <td><code>email</code></td>
+                          <td>String</td>
+                          <td>Required</td>
+                        </tr>
+                        <tr>
+                          <td><code>password</code></td>
+                          <td>String</td>
+                          <td>Required</td>
+                        </tr>
+                        <tr>
+                          <td><code>passwordConfirmation</code></td>
+                          <td>String</td>
+                          <td>Required</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="message is-small">
+                  <div class="message-header">
                     Example payload
                   </div>
                   <div class="message-body">
@@ -155,7 +194,36 @@
                     Example request
                   </div>
                   <div class="message-body">
-                    <code>POST {BASE_URI}/register</code>
+                    <code>POST {BASE_URI}/login</code>
+                  </div>
+                </div>
+
+                <div class="message is-small">
+                  <div class="message-header">
+                    Parameters
+                  </div>
+                  <div class="message-body">
+                    <table class="table is-fullwidth">
+                      <thead>
+                        <tr>
+                          <th>Property</th>
+                          <th>Data type</th>
+                          <th>Additional info</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><code>email</code></td>
+                          <td>String</td>
+                          <td>Required</td>
+                        </tr>
+                        <tr>
+                          <td><code>password</code></td>
+                          <td>String</td>
+                          <td>Required</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
 
@@ -205,6 +273,7 @@
                   <div class="icon is-pulled-right">
                     <i class="fas fa-angle-down" aria-hidden="true"></i>
                   </div>
+                  <span class="tag is-pulled-right">INDEX ROUTE</span>
                 </div>
               </div>
 
@@ -283,6 +352,7 @@
                   <div class="icon is-pulled-right">
                     <i class="fas fa-angle-down" aria-hidden="true"></i>
                   </div>
+                  <span class="tag is-pulled-right">CREATE ROUTE</span>
                 </div>
               </div>
 
@@ -293,6 +363,45 @@
                   </div>
                   <div class="message-body">
                     <code>POST {BASE_URI}/cheeses</code>
+                  </div>
+                </div>
+
+                <div class="message is-small">
+                  <div class="message-header">
+                    Parameters
+                  </div>
+                  <div class="message-body">
+                    <table class="table is-fullwidth">
+                      <thead>
+                        <tr>
+                          <th>Property</th>
+                          <th>Data type</th>
+                          <th>Additional info</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><code>name</code></td>
+                          <td>String</td>
+                          <td>Required</td>
+                        </tr>
+                        <tr>
+                          <td><code>origin</code></td>
+                          <td>String</td>
+                          <td>Required</td>
+                        </tr>
+                        <tr>
+                          <td><code>image</code></td>
+                          <td>String</td>
+                          <td>Required</td>
+                        </tr>
+                        <tr>
+                          <td><code>tastingNotes</code></td>
+                          <td>String</td>
+                          <td>Max 380 characters</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
 
@@ -353,6 +462,7 @@
                   <div class="icon is-pulled-right">
                     <i class="fas fa-angle-down" aria-hidden="true"></i>
                   </div>
+                  <span class="tag is-pulled-right">SHOW ROUTE</span>
                 </div>
               </div>
 
@@ -404,6 +514,7 @@
                   <div class="icon is-pulled-right">
                     <i class="fas fa-angle-down" aria-hidden="true"></i>
                   </div>
+                  <span class="tag is-pulled-right">UPDATE ROUTE</span>
                 </div>
               </div>
 
@@ -414,6 +525,45 @@
                   </div>
                   <div class="message-body">
                     <code>PUT {BASE_URI}/cheeses/5bf69d5b115e7252c5e6b911</code>
+                  </div>
+                </div>
+
+                <div class="message is-small">
+                  <div class="message-header">
+                    Parameters
+                  </div>
+                  <div class="message-body">
+                    <table class="table is-fullwidth">
+                      <thead>
+                        <tr>
+                          <th>Property</th>
+                          <th>Data type</th>
+                          <th>Additional info</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><code>name</code></td>
+                          <td>String</td>
+                          <td>Required</td>
+                        </tr>
+                        <tr>
+                          <td><code>origin</code></td>
+                          <td>String</td>
+                          <td>Required</td>
+                        </tr>
+                        <tr>
+                          <td><code>image</code></td>
+                          <td>String</td>
+                          <td>Required</td>
+                        </tr>
+                        <tr>
+                          <td><code>tastingNotes</code></td>
+                          <td>String</td>
+                          <td>Max 380 characters</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
 
@@ -469,6 +619,7 @@
                   <div class="icon is-pulled-right">
                     <i class="fas fa-angle-down" aria-hidden="true"></i>
                   </div>
+                  <span class="tag is-pulled-right">DELETE ROUTE</span>
                 </div>
               </div>
 
